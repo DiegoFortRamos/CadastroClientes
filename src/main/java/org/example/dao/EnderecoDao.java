@@ -14,4 +14,9 @@ public class EnderecoDao {
     public void cadastrar(Endereco endereco){
         em.persist(endereco);
     }
+
+    public void remover(Endereco endereco){
+        em.merge(endereco);
+        em.remove(endereco);
+    }
 }

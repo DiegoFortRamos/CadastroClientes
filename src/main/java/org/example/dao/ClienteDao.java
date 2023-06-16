@@ -16,5 +16,10 @@ public class ClienteDao {
         em.persist(cliente);
     }
 
+    public void removerCliente(Cliente cliente){
+        em.merge(cliente);
+        em.remove(cliente);
+    }
+
 
 }
